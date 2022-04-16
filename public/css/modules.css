@@ -1,0 +1,123 @@
+.intro-home {
+  position: relative;
+}
+.intro-home h1 {
+  font-size: 80px;
+  line-height: 1em;
+  font-family: "circular-book";
+}
+.intro-home h1 span a {
+  display: inline-block;
+  padding: 5px;
+  font-family: "sentinel-bold-italic";
+}
+.intro-home h1 span a:hover {
+  color: #fff;
+  background: #DE4C4C;
+}
+.intro-home #scroll-intro-home {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40px;
+}
+
+.paragraph-text-intro .content {
+  font-size: 40px;
+}
+
+.paragraph-links ol {
+  counter-reset: my-awesome-counter;
+  margin-left: 33px;
+}
+.paragraph-links ol li {
+  counter-increment: my-awesome-counter;
+  list-style: none;
+}
+.paragraph-links ol li:before {
+  content: "0" counter(my-awesome-counter);
+  font-family: "circular-book";
+  font-size: 16px;
+  line-height: 1;
+}
+.paragraph-links ol li a {
+  padding-left: 30px;
+  display: inline-block;
+  font-family: "sentinel-bold-italic";
+  font-size: 100px;
+}
+
+.paragraph-carousel .highlighted-client {
+  position: relative;
+}
+.paragraph-carousel .highlighted-client:before {
+  content: "";
+  height: 80%;
+  width: 50%;
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  background-color: #F0F0F0;
+}
+.paragraph-carousel .highlighted-client .wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 750px;
+  margin: auto;
+}
+.paragraph-carousel .highlighted-client .wrapper .text {
+  padding-left: 20px;
+  justify-content: center;
+}
+.paragraph-carousel .highlighted-client .wrapper .text h2 {
+  font-size: 70px;
+  font-family: "sentinel-bold-italic";
+  line-height: 1.1em;
+  padding-bottom: 20px;
+}
+.paragraph-carousel .carousel-swiper {
+  margin-top: 50px;
+}
+
+.paragraph-highlighted-text {
+  background-color: #000;
+}
+.paragraph-highlighted-text .content {
+  padding: 0 150px 0 50px;
+}
+.paragraph-highlighted-text .content * {
+  font-size: 80px;
+  color: #fff;
+}
+
+.paragraph-team {
+  background-color: #000;
+}
+
+@media screen and (max-width: 1280px) {
+  .intro-home h1 {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .intro-home h1 {
+    font-size: 40px;
+  }
+
+  .paragraph-links ol li a {
+    font-size: 40px;
+  }
+
+  .paragraph-carousel .highlighted-client .wrapper {
+    flex-direction: column;
+  }
+
+  .paragraph-text-intro .content {
+    font-size: 30px;
+  }
+}
+
+/*# sourceMappingURL=modules.css.map */

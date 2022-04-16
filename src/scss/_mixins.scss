@@ -1,0 +1,61 @@
+// VAriables
+$negre: #000;
+$blanc: #fff;
+$vermell: #DE4C4C;
+$gris: #707070;
+$grisuau: #F0F0F0;
+
+
+
+// Global variables
+$path: '';
+
+
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+@mixin setPath($string){
+  $path: $string !global;
+}
+@mixin webkits($property, $value){
+   -webkit-#{$property} :#{$value};
+   -moz-#{$property} :#{$value};
+   -ms-#{$property} :#{$value};
+   -o-#{$property} :#{$value};
+   #{$property} :#{$value};
+}
+@mixin fontFace($family,$fontName, $style: normal,$weight: normal) {
+  @font-face {
+    font-family: $family;
+    src: url('#{$path}#{$fontName}.woff2') format('woff2');
+    src: url('#{$path}#{$fontName}.woff') format('woff'); 
+    font-style: $style;
+    font-weight: $weight;
+  }
+}
+
+@mixin genericlink( $color1: $verd, $color2: $lila) {
+    a {
+        font-size: 14px;
+        padding:15px 25px; 
+        font-family:'inter-bold';
+        transition: .2s;
+        background-color:$color1;
+        display: inline-block;
+        color:$blanc;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        &:hover {
+            background-color: $color2;
+            color:$color1;
+        }
+    }
+}
+
+
+
+

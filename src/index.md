@@ -1,59 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>home page</title>
-  <link rel="stylesheet" href="/css/global.css">
-  <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/modules.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.1.0/swiper-bundle.css">
-  
-</head>
-<body>
+---
+title: home page
+layout: base.njk
+---
 
-    <div class="wrapper-navigation">
-      <div class="ico-close close"></div>
-      <div class="wrapper-content d-flex flex-col">
-        <div class="wrapper-top">
-          <div class="wrapper-left">
-            <div class="main-menu">
-              <ul>
-                <li><a href="clientes">Clientes</a></li>
-                <li><a href="nosotros">Nosotros</a></li>
-                <li><a href="que-hacemos">Qué hacemos</a>
-                  <ul>
-                    <li><a href="estrategia">Estrategia</a></li>
-                     <li><a href="estrategia">Diseño</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="layout-page">
-
-      <header class="front">
-        <div class="wrapper-top d-flex">
-          <div class="logo">
-            logo
-          </div>
-          <div class="wrapper-right">
-            <div class="ico-menu">
-              <div class="bar top"></div>
-                    <div class="bar middle"></div>
-                    <div class="bar bottom"></div>
-            </div>
-          </div>
-        </div>
-
-      </header>
-      <main id="content">
         
-       <div class="intro-home vw-eq-height">
+<div class="intro-home vw-eq-height">
     <div class="d-flex flex-col flex-center height-100 container">
         <h1>
           Somos Digital Bakers, una agencia centrada en <span><a href="">Estrategia</a>, <a href="">Diseño</a>, Tecnología y Contenido</span>.
@@ -68,8 +19,10 @@
           </g>
         </svg>
       </div>
+      
   </div>
 </div>
+
 <div class="paragraph-text-intro m-big border-title">
   <div class="container">
   <div class="title">
@@ -79,9 +32,12 @@
     <p>
     Tus objetivos son nuestros objetivos. Exploramos tu entorno. Encontramos nuevas oportunidades. Trazamos la ruta para alcanzar el éxito de una forma rápiza eficaz y única . Y planteamos las mejores solunciones tecnológicas , creativas y de contenido para conectar con tu audiencia.
     </p>
+
   </div>
   </div>
+
 </div>
+
 <div class="paragraph-links m-big border-title">
   <div class="container">
   <div class="title">
@@ -97,6 +53,7 @@
   </div>
   </div>
 </div>
+
 <div class="paragraph-carousel m-big border-title">
   <div class="container">
     <div class="title">
@@ -124,22 +81,6 @@
         </div>
       </div>
   </div>
+ 
 </div>
 
-
-      </main>
-      
-
-    </div>
-
-
-    
-
-  <footer id="footer">
-    footer
-  </footer>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.1.0/swiper-bundle.min.js"></script>
-  <script src="/js/functions.js"></script>
-</body>
-</html>

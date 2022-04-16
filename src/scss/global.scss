@@ -1,15 +1,91 @@
+@import 'mixins';
 
+/****************** WEBFONTS *******************/
+@include setPath('../fonts/');
+@include fontFace($family: 'circular-medium', $fontName: 'CircularStd-Medium');
+@include fontFace($family: 'circular-book', $fontName: 'CircularStd-Book');
+@include fontFace($family: 'circular-book-italic', $fontName: 'CircularStd-BookItalic');
+@include fontFace($family: 'circular-bold', $fontName: 'CircularStd-Bold');
+@include fontFace($family: 'circular-black', $fontName: 'CircularStd-Black');
+@include fontFace($family: 'sentinel-black', $fontName: 'Sentinel-Black');
+@include fontFace($family: 'sentinel-black-italic', $fontName: 'Sentinel-BlackItalic');
+@include fontFace($family: 'sentinel-bold', $fontName: 'Sentinel-Bold');
+@include fontFace($family: 'sentinel-bold-italic', $fontName: 'Sentinel-BoldItalic');
+@include fontFace($family: 'sentinel-book', $fontName: 'Sentinel-Book');
+@include fontFace($family: 'sentinel-book-italic', $fontName: 'Sentinel-BookItalic');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body{
+  font-family: 'sentinel-book';
+  font-size:22px;
+  line-height:1.2;
+  &.menu-open{
+    background-color:$negre;
+  }
+}
+
+a{
+  color:$vermell;
+  text-decoration: none;
+}
+p{
+  margin-top:5px;
+  margin-bottom:20px;
+}
 .container{
   max-width:1001px;
   padding:0 20px;
-  margin:auto;
+  margin:auto; 
 }
 
 .d-flex{
   display:flex;
 }
 
-.flex-column{
+.flex-col{
   flex-direction: column;
 }
 
@@ -17,13 +93,99 @@
   justify-content: space-between;
 }
 
-.view-height{
-
+.flex-center{
+  justify-content: center;
 }
+
+.height-100{
+  height:100%;
+}
+
+.vw-eq-height{
+  height:calc(100vh - 150px);
+}
+
+.m-big{
+  margin-top:clamp(2em, 7em, 3em);
+  margin-bottom:clamp(2em, 7em, 3em);
+}
+.p-big{
+  padding-top:clamp(2em, 10em, 4em);
+  padding-bottom:clamp(2em, 10em, 4em);
+}
+
+.p-med{
+  padding-top:clamp(2em, 4em, 2em);
+  padding-bottom:clamp(2em, 4em, 2em);
+}
+
+.layout-page{
+  background-color:$blanc;
+}
+
+.menu-open {
+	overflow: hidden;
+	.layout-page {
+		transform: translate(-43%, 80px);
+	}
+}
+
+.border-title{
+  position:relative;
+  .title{
+    font-family: 'circular-book';
+    text-transform: uppercase;
+    font-size:16px;
+    margin-bottom:30px;
+  }
+  &:before{
+    content:"";
+    width:calc((100% - 1020px) / 2);
+    left:0;
+    position:absolute;
+    border-bottom:1px solid $gris;
+    top:14px;
+    height:1px;
+  }
+}
+
+.reserve-links{
+  a{
+    color:$negre;
+    &:hover{
+      color:$vermell;
+    }
+  }
+}
+
+.link-more-generic{
+  margin-top:clamp(2em, 3em, 2em);
+  a{
+    font-family: 'circular-book-italic';
+    color:$negre;
+    text-decoration: underline;
+    font-size:18px;
+  }
+}
+
 
 @media screen and (max-width:1280px){
   .container{
     max-width:684px;
     padding:0 15px;
+  }
+}
+
+@media screen and (max-width:580px){
+  .container{
+    max-width:100%;
+  }
+  .border-title{
+    .title{
+      padding-left:80px;
+    }
+    &:before{
+      width:calc(100% - 280px);
+    }
   }
 }

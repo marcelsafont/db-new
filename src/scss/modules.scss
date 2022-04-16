@@ -1,0 +1,146 @@
+@import 'mixins';
+.intro-home{
+  position:relative;
+  h1{
+    font-size:80px;
+    line-height:1em;
+    font-family: 'circular-book';
+    span{
+      a{
+        display:inline-block;
+        padding:5px;
+        font-family: 'sentinel-bold-italic';
+        &:hover{
+          color:$blanc;
+          background:$vermell;
+        }
+      }
+    }
+  }
+  #scroll-intro-home{
+    position:absolute;
+    bottom:-10px;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    width:40px;
+  }
+ 
+}
+
+.paragraph-text-intro{  
+  .content{
+    font-size:40px;
+  }
+}
+
+.paragraph-links{
+  ol{
+    counter-reset: my-awesome-counter;
+    margin-left:33px;
+    li{
+      counter-increment: my-awesome-counter;
+      list-style: none;
+      &:before {
+        content: "0" counter(my-awesome-counter);
+        font-family: 'circular-book';
+        font-size: 16px;
+        line-height: 1;
+      }
+      a{
+        padding-left:30px;
+        display:inline-block;
+        font-family: 'sentinel-bold-italic';
+        font-size:100px;
+      }
+    }
+  }
+}
+
+.paragraph-carousel{
+  .highlighted-client{
+    position:relative;
+    &:before{
+      content:"";
+      height:80%;
+      width:50%;
+      position:absolute;
+      z-index:0;
+      bottom:0;
+      background-color:$grisuau;
+    }
+    .wrapper{
+      position:relative;
+      z-index:1;
+      max-width:750px;
+      margin:auto;
+      .text{
+        padding-left:20px;
+        h2{
+          font-size:70px;
+          font-family: 'sentinel-bold-italic';
+          line-height:1.1em;
+          padding-bottom:20px;
+        }
+        justify-content: center;
+      }
+    }
+    
+  }
+  .carousel-swiper{
+    margin-top:50px;
+  }
+}
+
+.paragraph-highlighted-text{
+  background-color:$negre;
+  .content{
+    padding:0 150px 0 50px;
+    *{
+      font-size:80px;
+      color:$blanc;
+    }
+  }
+}
+
+.paragraph-team{
+  background-color:$negre;
+}
+
+@media screen and (max-width:1280px){
+  .intro-home{
+    h1{
+      font-size:50px;
+    }
+  }
+}
+
+@media screen and (max-width:580px){
+  .intro-home{
+    h1{
+      font-size:40px;
+    }
+  }
+  .paragraph-links{
+    ol{
+      li{
+        a{
+          font-size:40px;
+        }
+      }
+    }
+  }
+  .paragraph-carousel{
+    .highlighted-client{
+      .wrapper{
+        flex-direction: column;
+      }
+    } 
+  } 
+  .paragraph-text-intro{
+    .content{
+      font-size:30px;
+    }
+  }
+}

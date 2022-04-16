@@ -1,3 +1,146 @@
+/****************** WEBFONTS *******************/
+@font-face {
+  font-family: "circular-medium";
+  src: url("../fonts/CircularStd-Medium.woff2") format("woff2");
+  src: url("../fonts/CircularStd-Medium.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "circular-book";
+  src: url("../fonts/CircularStd-Book.woff2") format("woff2");
+  src: url("../fonts/CircularStd-Book.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "circular-book-italic";
+  src: url("../fonts/CircularStd-BookItalic.woff2") format("woff2");
+  src: url("../fonts/CircularStd-BookItalic.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "circular-bold";
+  src: url("../fonts/CircularStd-Bold.woff2") format("woff2");
+  src: url("../fonts/CircularStd-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "circular-black";
+  src: url("../fonts/CircularStd-Black.woff2") format("woff2");
+  src: url("../fonts/CircularStd-Black.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "sentinel-black";
+  src: url("../fonts/Sentinel-Black.woff2") format("woff2");
+  src: url("../fonts/Sentinel-Black.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "sentinel-black-italic";
+  src: url("../fonts/Sentinel-BlackItalic.woff2") format("woff2");
+  src: url("../fonts/Sentinel-BlackItalic.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "sentinel-bold";
+  src: url("../fonts/Sentinel-Bold.woff2") format("woff2");
+  src: url("../fonts/Sentinel-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "sentinel-bold-italic";
+  src: url("../fonts/Sentinel-BoldItalic.woff2") format("woff2");
+  src: url("../fonts/Sentinel-BoldItalic.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "sentinel-book";
+  src: url("../fonts/Sentinel-Book.woff2") format("woff2");
+  src: url("../fonts/Sentinel-Book.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "sentinel-book-italic";
+  src: url("../fonts/Sentinel-BookItalic.woff2") format("woff2");
+  src: url("../fonts/Sentinel-BookItalic.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "sentinel-book";
+  font-size: 22px;
+  line-height: 1.2;
+}
+body.menu-open {
+  background-color: #000;
+}
+
+a {
+  color: #DE4C4C;
+  text-decoration: none;
+}
+
+p {
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
 .container {
   max-width: 1001px;
   padding: 0 20px;
@@ -8,7 +151,7 @@
   display: flex;
 }
 
-.flex-column {
+.flex-col {
   flex-direction: column;
 }
 
@@ -16,10 +159,96 @@
   justify-content: space-between;
 }
 
+.flex-center {
+  justify-content: center;
+}
+
+.height-100 {
+  height: 100%;
+}
+
+.vw-eq-height {
+  height: calc(100vh - 150px);
+}
+
+.m-big {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.p-big {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+.p-med {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.layout-page {
+  background-color: #fff;
+}
+
+.menu-open {
+  overflow: hidden;
+}
+.menu-open .layout-page {
+  transform: translate(-43%, 80px);
+}
+
+.border-title {
+  position: relative;
+}
+.border-title .title {
+  font-family: "circular-book";
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+.border-title:before {
+  content: "";
+  width: calc((100% - 1020px) / 2);
+  left: 0;
+  position: absolute;
+  border-bottom: 1px solid #707070;
+  top: 14px;
+  height: 1px;
+}
+
+.reserve-links a {
+  color: #000;
+}
+.reserve-links a:hover {
+  color: #DE4C4C;
+}
+
+.link-more-generic {
+  margin-top: 2em;
+}
+.link-more-generic a {
+  font-family: "circular-book-italic";
+  color: #000;
+  text-decoration: underline;
+  font-size: 18px;
+}
+
 @media screen and (max-width: 1280px) {
   .container {
     max-width: 684px;
     padding: 0 15px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .border-title .title {
+    padding-left: 80px;
+  }
+  .border-title:before {
+    width: calc(100% - 280px);
   }
 }
 
