@@ -1,25 +1,29 @@
 @charset "UTF-8";
-header .wrapper-top {
+#header {
+  padding-top: 20px;
+}
+#header .logo {
+  max-width: 160px;
+  padding-left: 30px;
+}
+#header .logo img {
+  max-width: 100%;
+}
+#header .wrapper-top {
   display: flex;
   justify-content: space-between;
 }
-header .wrapper-top .logo {
-  padding: 20px 40px 10px;
-}
-header .wrapper-top .logo img {
-  width: 140px;
-}
-header .wrapper-top .wrapper-right {
+#header .wrapper-top .wrapper-right {
   display: flex;
   height: 80px;
   align-items: center;
 }
-header .wrapper-top .wrapper-right .wrapper-language {
+#header .wrapper-top .wrapper-right .wrapper-language {
   margin-right: 50px;
   color: #fff;
   text-align: center;
 }
-header .wrapper-top .wrapper-right .wrapper-language select {
+#header .wrapper-top .wrapper-right .wrapper-language select {
   appearance: none;
   color: #fff;
   background: none;
@@ -27,41 +31,49 @@ header .wrapper-top .wrapper-right .wrapper-language select {
   font-size: 15px;
   font-family: "inter-bold";
 }
-header .wrapper-top .wrapper-right .ico-menu {
+#header .wrapper-top .wrapper-right .ico-menu {
   padding: 30px;
 }
-header .wrapper-top .wrapper-right .ico-menu .bar {
-  width: 25px;
-  height: 2px;
-  border-radius: 10px;
-  margin: 3px 0;
+#header .wrapper-top .wrapper-right .ico-menu .bar {
+  width: 30px;
+  height: 4px;
+  margin: 4px 0;
   transition: all 0.5s ease;
   background-color: #000;
   margin: 0 0 5px 0;
 }
-header .wrapper-top .wrapper-right .ico-menu .bar:hover {
+#header .wrapper-top .wrapper-right .ico-menu .bar:hover {
   cursor: pointer;
 }
-header .wrapper-top .wrapper-right .ico-menu:hover {
+#header .wrapper-top .wrapper-right .ico-menu .bar:nth-child(2) {
+  width: 20px;
+  margin-left: 10px;
+  transition: all 0.3s;
+}
+#header .wrapper-top .wrapper-right .ico-menu:hover {
   cursor: pointer;
 }
-header .wrapper-submenu {
+#header .wrapper-top .wrapper-right .ico-menu:hover .bar:nth-child(2) {
+  width: 30px;
+  margin-left: 0;
+}
+#header .wrapper-submenu {
   height: 75px;
 }
-header .wrapper-submenu ul {
+#header .wrapper-submenu ul {
   width: 100%;
   display: flex;
   justify-content: space-between;
   height: 100%;
   align-items: center;
 }
-header .wrapper-submenu ul li {
+#header .wrapper-submenu ul li {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-header .wrapper-submenu ul li a {
+#header .wrapper-submenu ul li a {
   display: inline-block;
   padding: 20px;
   color: #fff;
@@ -75,16 +87,10 @@ header .wrapper-submenu ul li a {
   justify-content: center;
   text-align: center;
 }
-header .wrapper-submenu ul li:first-child a {
+#header .wrapper-submenu ul li:first-child a {
   font-size: 20px;
   font-family: "TiemposFine";
   padding: 20px 40px;
-}
-header.front .wrapper-top .logo {
-  padding: 20px 40px;
-}
-header.front .wrapper-top .logo img {
-  width: 210px;
 }
 
 .wrapper-navigation {
@@ -98,7 +104,7 @@ header.front .wrapper-top .logo img {
 }
 .wrapper-navigation .ico-close {
   position: absolute;
-  top: 30px;
+  top: 45px;
   right: 30px;
   width: 25px;
   height: 25px;
@@ -107,14 +113,14 @@ header.front .wrapper-top .logo img {
   background: #fff;
   color: #fff;
   content: "";
-  height: 1px;
+  height: 3px;
   left: 50%;
   top: 50%;
   transform: translate3d(-50%, -50%, 0) rotate(45deg);
   transition: all 400ms cubic-bezier(0.25, 0.6, 0.36, 1);
   position: absolute;
   top: 50%;
-  width: 25px;
+  width: 30px;
 }
 .wrapper-navigation .ico-close:before {
   transform: translate3d(-50%, -50%, 0) rotate(-45deg);
@@ -134,7 +140,7 @@ header.front .wrapper-top .logo img {
   width: calc(40% - 100px);
   float: right;
   height: 100%;
-  padding: 100px 50px;
+  padding: 120px 50px;
   justify-content: flex-start;
 }
 .wrapper-navigation .wrapper-content .wrapper-top {
@@ -330,7 +336,7 @@ header .wrapper-right .wrapper-search {
     font-size: 28px;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 580px) {
   .wrapper-navigation .ico-close {
     top: 20px;
   }
@@ -368,6 +374,10 @@ header .wrapper-right .wrapper-search {
   }
   .wrapper-navigation .wrapper-content .wrapper-bottom .xarxes {
     text-align: left;
+  }
+
+  #header .logo {
+    max-width: 100px;
   }
 }
 
