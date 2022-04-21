@@ -71,6 +71,9 @@
   max-width: 850px;
   margin: auto;
 }
+.paragraph-carousel .highlighted-client .wrapper img {
+  max-width: 300px;
+}
 .paragraph-carousel .highlighted-client .wrapper .text {
   padding-left: 70px;
   padding-top: 50px;
@@ -90,7 +93,7 @@
   position: absolute;
   z-index: 3;
   width: 70px;
-  left: -110px;
+  left: -130px;
   top: 60px;
 }
 .paragraph-carousel .carousel-swiper .btns-slider .swiper-button-next, .paragraph-carousel .carousel-swiper .btns-slider .swiper-button-prev {
@@ -100,6 +103,9 @@
 }
 .paragraph-carousel .carousel-swiper .btns-slider .swiper-button-next:after, .paragraph-carousel .carousel-swiper .btns-slider .swiper-button-prev:after {
   display: none;
+}
+.paragraph-carousel .carousel-swiper .btns-slider .swiper-button-next:hover, .paragraph-carousel .carousel-swiper .btns-slider .swiper-button-prev:hover {
+  opacity: 0.6;
 }
 .paragraph-carousel .carousel-swiper .btns-slider .swiper-button-prev {
   background: url("/img/slider-prev.svg") no-repeat center center;
@@ -114,6 +120,10 @@
 .paragraph-highlighted-text .content * {
   font-size: 80px;
   color: #fff;
+  font-family: "circular-book";
+}
+.paragraph-highlighted-text .content i, .paragraph-highlighted-text .content em {
+  font-family: "sentinel-semibold-italic";
 }
 
 .paragraph-latest-news {
@@ -122,6 +132,23 @@
 
 .paragraph-team {
   background-color: #000;
+}
+
+.paragraph-text-simple .container {
+  position: relative;
+}
+.paragraph-text-simple .container .bg-text {
+  font-size: 300px;
+  position: absolute;
+  z-index: 0;
+  left: -150px;
+  color: #EBEBEB;
+  top: calc(50% - 230px);
+  font-family: "circular-black";
+}
+.paragraph-text-simple .container .content {
+  position: relative;
+  z-index: 1;
 }
 
 @media screen and (max-width: 1280px) {

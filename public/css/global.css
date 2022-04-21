@@ -76,6 +76,20 @@
   font-style: normal;
   font-weight: normal;
 }
+@font-face {
+  font-family: "sentinel-semibold";
+  src: url("../fonts/Sentinel-Semibold.woff2") format("woff2");
+  src: url("../fonts/Sentinel-Semibold.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "sentinel-semibold-italic";
+  src: url("../fonts/Sentinel-SemiboldItalic.woff2") format("woff2");
+  src: url("../fonts/Sentinel-SemiboldItalic.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -188,13 +202,13 @@ p {
 }
 
 .m-big {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 7rem;
+  margin-bottom: 7rem;
 }
 
 .p-big {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 .p-med {
@@ -230,6 +244,19 @@ p {
   border-bottom: 1px solid #707070;
   top: 14px;
   height: 1px;
+}
+
+.bg-black-links a {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 18px;
+  font-family: "circular-book-italic";
+}
+.bg-black-links.reverse a {
+  background-color: #fff;
+  color: #000;
 }
 
 .reserve-links a {
@@ -281,6 +308,7 @@ p {
 #footer {
   background-color: #F0F0F0;
   padding-bottom: 60px;
+  margin-top: -3rem;
 }
 #footer a {
   color: #000;
@@ -290,7 +318,7 @@ p {
 }
 #footer .contact-block {
   font-size: 80px;
-  font-family: "sentinel-bold-italic";
+  font-family: "sentinel-semibold-italic";
   line-height: 1;
 }
 #footer .menu-legal ul {
@@ -308,7 +336,7 @@ p {
   list-style: none;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 10px;
+  grid-column-gap: 20px;
   grid-row-gap: 6px;
 }
 #footer .menu-footer ul li * {
@@ -327,6 +355,7 @@ p {
 }
 #footer .info-footer b {
   font-size: 20px;
+  font-family: "circular-bold";
 }
 
 .client-slider-teaser h2 {
@@ -368,6 +397,10 @@ p {
 
   #footer .contact-block {
     font-size: 30px;
+  }
+
+  .bg-black-links a {
+    font-size: 17px;
   }
 }
 

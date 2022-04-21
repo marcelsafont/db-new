@@ -13,6 +13,8 @@
 @include fontFace($family: 'sentinel-bold-italic', $fontName: 'Sentinel-BoldItalic');
 @include fontFace($family: 'sentinel-book', $fontName: 'Sentinel-Book');
 @include fontFace($family: 'sentinel-book-italic', $fontName: 'Sentinel-BookItalic');
+@include fontFace($family: 'sentinel-semibold', $fontName: 'Sentinel-Semibold');
+@include fontFace($family: 'sentinel-semibold-italic', $fontName: 'Sentinel-SemiboldItalic');
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -122,12 +124,12 @@ p{
 }
 
 .m-big{
-  margin-top:clamp(2rem, 3rem, 7rem);
-  margin-bottom:clamp(2rem, 3rem, 7rem);
+  margin-top:clamp(3rem, 7rem, 10rem);
+  margin-bottom:clamp(3rem, 7rem, 10rem);
 }
 .p-big{
-  padding-top:clamp(2rem, 5rem, 10rem);
-  padding-bottom:clamp(2rem, 5rem, 10rem);
+  padding-top:clamp(3rem, 6rem, 8rem);
+  padding-bottom:clamp(3rem, 6rem, 8rem);
 }
 
 .p-med{
@@ -162,6 +164,24 @@ p{
     border-bottom:1px solid $gris;
     top:14px;
     height:1px;
+  }
+}
+
+.bg-black-links{
+  a{
+    background-color:$negre;
+    color:#fff;
+    padding:10px 25px;
+    border-radius:25px;
+    font-size:18px;
+    font-family: 'circular-book-italic';
+  }
+  &.reverse{
+    a{
+      background-color:$blanc;
+      color:$negre;
+    }
+    
   }
 }
 
@@ -218,6 +238,7 @@ p{
 #footer{
   background-color:$grisuau;
   padding-bottom:60px;
+  margin-top:clamp(-3rem, -7rem, -8rem);
   a{
     color:$negre;
     &:hover{
@@ -226,7 +247,7 @@ p{
   }
   .contact-block{
     font-size:80px;
-    font-family: 'sentinel-bold-italic';
+    font-family: 'sentinel-semibold-italic';
     line-height:1;
   }
   .menu-legal{
@@ -247,7 +268,7 @@ p{
       list-style: none;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(3, 1fr);
-      grid-column-gap:10px;
+      grid-column-gap:20px;
       grid-row-gap:6px;
       li{
         * {
@@ -269,6 +290,7 @@ p{
     }
     b{
       font-size:20px;
+      font-family: 'circular-bold';
     }
   }
 }
@@ -322,5 +344,8 @@ p{
     .contact-block{
       font-size:30px;
     }
+  }
+  .bg-black-links a{
+    font-size:17px;
   }
 }

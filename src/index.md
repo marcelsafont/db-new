@@ -38,112 +38,11 @@ layout: base.njk
 
 </div>
 
-<div class="paragraph-links m-big border-title">
-  <div class="container">
-  <div class="title">
-    Servicios
-  </div>
-  <div class="content reserve-links">
-    <ol>
-      <li><a href="#">Estrategia</a></li>
-      <li><a href="#">Estrategia</a></li>
-      <li><a href="#">Estrategia</a></li>
-      <li><a href="#">Estrategia</a></li>
-    </ol>
-  </div>
-  </div>
-</div>
-
-<div class="paragraph-carousel m-big border-title">
-  <div class="container">
-    <div class="title">
-      Clientes
-    </div>
-    <div class="content">
-      <div class="highlighted-client">
-        <div class="d-flex wrapper">
-          <img src="/img/cliente-destacado.png" />
-          <div class="text d-flex flex-col">
-            <h2>Hospital Sant Joan de Déu</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit eros ut nulla egestas, eget eleifend</p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-swiper">
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="client-slider-teaser">
-                <h2 class="reserve-links">
-                <a href="#">Hospital Sant Joan de Déu</a>
-                </h2>
-                <div class="content">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit eros ut nulla egestas, eget eleifend</p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-            <div class="client-slider-teaser">
-                <h2 class="reserve-links">
-                <a href="#">Hospital Sant Joan de Déu</a>
-                </h2>
-                <div class="content">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit eros ut nulla egestas, eget eleifend</p>
-                </div>
-                <div class="link-icon">
-                  <a href="">read more</a>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-            <div class="client-slider-teaser">
-                <h2 class="reserve-links">
-                <a href="#">Hospital Sant Joan de Déu</a>
-                </h2>
-                <div class="content">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque blandit eros ut nulla egestas, eget eleifend</p>
-                </div>
-                <div class="link-icon">
-                  <a href="">read more</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="btns-slider">
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-          </div>
-          <div class="link-more-generic">
-          <a href="#">Ver todos los clientes</a>
-          </div>
-      </div>
-  </div>
-</div>
+{% include 'paragraphs/paragraph-links.njk' %}
+{% include 'paragraphs/paragraph-carousel.njk' %}
+{% include 'paragraphs/paragraph-latest-news.njk' %}
 
 
-<div class="paragraph-latest-news p-big m-big">
-  <div class="container">
-    <div class="d-flex">
-      <div class="article-teaser-latest">
-        <h2>
-          Digital Marketing Mistakes To Avoid In 2021
-        </h2>
-        <div class="content">
-          <p>Having a well-thought-out plan for digital marketing is crucial to up your marketing efforts.</p>
-        </div>
-      </div>
-      <div class="article-teaser-latest">
-        <h2>
-          Digital Marketing Mistakes To Avoid In 2021
-        </h2>
-        <div class="content">
-          <p>Having a well-thought-out plan for digital marketing is crucial to up your marketing efforts.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
