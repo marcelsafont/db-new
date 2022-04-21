@@ -160,7 +160,16 @@
   .intro-home h1 {
     font-size: 40px;
   }
+  .intro-home #scroll-intro-home {
+    bottom: 0;
+  }
 
+  .paragraph-links ol {
+    margin-left: 0;
+  }
+  .paragraph-links ol li {
+    margin-bottom: 10px;
+  }
   .paragraph-links ol li a {
     font-size: 40px;
   }
@@ -181,6 +190,23 @@
 
   .paragraph-latest-news .d-flex {
     flex-direction: column;
+  }
+
+  .paragraph-carousel .highlighted-client {
+    margin: 0;
+  }
+  .paragraph-carousel .highlighted-client:before {
+    width: 100%;
+    height: 45%;
+    bottom: auto;
+    top: 40px;
+  }
+  .paragraph-carousel .highlighted-client .wrapper img {
+    max-width: 200px;
+    margin: auto;
+  }
+  .paragraph-carousel .highlighted-client .wrapper .text {
+    padding-left: 0;
   }
 }
 
