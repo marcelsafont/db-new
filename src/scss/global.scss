@@ -77,6 +77,9 @@ a{
   color:$vermell;
   text-decoration: none;
 }
+img{
+  max-width:100%;
+}
 p{
   margin-top:5px;
   margin-bottom:20px;
@@ -124,17 +127,17 @@ p{
 }
 
 .m-big{
-  margin-top:clamp(5rem, 4rem, 8rem);
-  margin-bottom:clamp(5rem, 4rem, 8rem);
+  margin-top:clamp(2rem, 10vmax, 10rem);
+  margin-bottom:clamp(2rem, 10vmax, 10rem);
 }
 .p-big{
-  padding-top:clamp(3rem, 6rem, 8rem);
-  padding-bottom:clamp(3rem, 6rem, 8rem);
+  padding-top:clamp(3rem, 7vmax, 7rem);
+  padding-bottom:clamp(3rem, 7vmax, 7rem);
 }
 
 .p-med{
-  padding-top:clamp(2em, 4em, 2em);
-  padding-bottom:clamp(2em, 4em, 2em);
+  padding-top:clamp(3rem, 5vmax, 5rem);
+  padding-bottom:clamp(3rem, 5vmax, 5rem);
 }
 
 .layout-page{
@@ -169,6 +172,7 @@ p{
   }
 }
 
+
 .bg-black-links{
   a{
     background-color:$negre;
@@ -177,11 +181,21 @@ p{
     border-radius:25px;
     font-size:18px;
     font-family: 'circular-book-italic';
+    transition: all .3s;
+    &:hover{
+      background-color:$vermell;
+    }
   }
+  
   &.reverse{
     a{
       background-color:$blanc;
       color:$negre;
+      transition: all .3s;
+      &:hover{
+        color:$blanc;
+        background-color:$vermell;
+      }
     }
     
   }
@@ -201,9 +215,27 @@ p{
   a{
     font-family: 'circular-book-italic';
     color:$negre;
-    text-decoration: underline;
     font-size:18px;
+    position:relative;
+    &:after{
+      height:1px;
+      content:"";
+      position:absolute;
+      width:100%;
+      background-color:$negre;
+      bottom:0;
+      left:0;
+      transition: all .3s;
+    }
+    &:hover{
+      color:$vermell;
+      &:after{
+        width:115%;
+        background-color:$vermell;
+      }
+    }
   }
+
 }
 
 .link-icon{
@@ -239,7 +271,6 @@ p{
 
 #footer{
   background-color:$grisuau;
-  margin-top:clamp(-5rem, -3rem, -6rem);
   a{
     color:$negre;
     &:hover{
@@ -250,6 +281,7 @@ p{
     font-size:80px;
     font-family: 'sentinel-semibold-italic';
     line-height:1;
+    padding-top:0;
   }
   .menu-legal{
     ul{
@@ -316,6 +348,15 @@ p{
     color:$blanc;
     font-family: 'sentinel-bold-italic';
     font-size:30px;
+    a{
+      color:$blanc;
+      font-family: 'sentinel-bold-italic';
+      font-size:30px;
+      transition: all .3s;
+      &:hover{
+        color:$vermell;
+      }
+    }
   }
   .content{
     * {
@@ -337,14 +378,17 @@ p{
       font-size:60px;
     }
   }
+  .border-title:before{
+    width: calc((100% - 700px) / 2);
+  }
 }
 
 @media screen and (max-width:992px){
   #footer .d-flex{
     flex-direction: column;
     align-items: flex-start;
-    > div{
-      margin-bottom:15px;
+    > *{
+      margin-bottom:25px;
     }
   }
   #footer{
@@ -366,14 +410,14 @@ p{
       padding-left:80px;
     }
     &:before{
-      width:calc(100% - 280px);
+      width:80px;
     }
   }
   #footer{
     
     .contact-block{
       font-size:30px;
-      margin-bottom:20px;
+      margin-bottom:25px;
     }
   }
   .bg-black-links a{

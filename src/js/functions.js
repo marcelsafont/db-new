@@ -13,7 +13,7 @@ $(document).ready(function() {
 
     const swiper = new Swiper('.swiper', {
       loop: true,
-      slidesPerView: 3,
+      slidesPerView: 1,
       spaceBetween: 40,
     
       // If we need pagination
@@ -31,6 +31,20 @@ $(document).ready(function() {
       scrollbar: {
         el: '.swiper-scrollbar',
       },
+      breakpoints: {
+        750: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+        992: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        }
+      }
     });
       
 });

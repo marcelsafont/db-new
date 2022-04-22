@@ -4,24 +4,7 @@ layout: base.njk
 ---
 
         
-<div class="intro-home vw-eq-height">
-    <div class="d-flex flex-col flex-center height-100 container">
-        <h1>
-          Somos Digital Bakers, una agencia centrada en <span><a href="">Estrategia</a>, <a href="">Diseño</a>, Tecnología y Contenido</span>.
-      </h1>
-      <div class="link-more-generic"><a href="#">Sobre Digital Bakers</a></div>
-      <div id="scroll-intro-home">
-      <svg xmlns="http://www.w3.org/2000/svg" width="15.611" height="38.58" viewBox="0 0 15.611 38.58">
-          <g id="Group_2276" data-name="Group 2276" transform="translate(0.707 38.08) rotate(-90)">
-            <path id="Path_3033" data-name="Path 3033" d="M7.1,14.2,0,7.1,7.1,0" transform="translate(0 0)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-            <path id="Path_3034" data-name="Path 3034" d="M0,0H23.042" transform="translate(0 7.098)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-            <path id="Path_4736" data-name="Path 4736" d="M6.017,0H0" transform="translate(31.564 7.099)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-          </g>
-        </svg>
-      </div>
-      
-  </div>
-</div>
+{% include 'paragraphs/paragraph-intro-home.njk' %}
 
 <div class="paragraph-text-intro m-big border-title">
   <div class="container">
@@ -30,7 +13,7 @@ layout: base.njk
   </div>
   <div class="content">
     <p>
-    Tus objetivos son nuestros objetivos. Exploramos tu entorno. Encontramos nuevas oportunidades. Trazamos la ruta para alcanzar el éxito de una forma rápiza eficaz y única . Y planteamos las mejores solunciones tecnológicas , creativas y de contenido para conectar con tu audiencia.
+    Tus objetivos son nuestros objetivos. Exploramos tu <a href="">entorno</a>. Encontramos nuevas oportunidades. Trazamos la ruta para alcanzar el éxito de una forma rápiza eficaz y única . Y planteamos las mejores solunciones tecnológicas , creativas y de contenido para conectar con tu audiencia.
     </p>
 
   </div>

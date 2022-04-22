@@ -1,3 +1,36 @@
+@keyframes jumpInfinite1 {
+  0% {
+    transform: translate(31.564px, 7.099px);
+  }
+  50% {
+    transform: translate(15.564px, 7.099px);
+  }
+  100% {
+    transform: translate(31.564px, 7.099px);
+  }
+}
+@keyframes jumpInfinite2 {
+  0% {
+    transform: translate(0, 7.098px);
+  }
+  50% {
+    transform: translate(-8px, 7.098px);
+  }
+  100% {
+    transform: translate(0, 7.098px);
+  }
+}
+@keyframes jumpInfinite3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-8px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
 .intro-home {
   position: relative;
 }
@@ -8,7 +41,7 @@
 }
 .intro-home h1 span a {
   display: inline-block;
-  padding: 5px;
+  padding: 2px 7px;
   font-family: "sentinel-bold-italic";
 }
 .intro-home h1 span a:hover {
@@ -22,7 +55,19 @@
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 40px;
+  width: 20px;
+}
+.intro-home #arrow-down {
+  height: 55px;
+}
+.intro-home #arrow-down #Path_4736 {
+  animation: jumpInfinite1 1.5s infinite;
+}
+.intro-home #arrow-down #Path_3034 {
+  animation: jumpInfinite2 1.5s infinite;
+}
+.intro-home #arrow-down #Path_3033 {
+  animation: jumpInfinite3 1.5s infinite;
 }
 
 .paragraph-text-intro .content {
@@ -44,10 +89,16 @@
   line-height: 1;
 }
 .paragraph-links ol li a {
-  padding-left: 30px;
+  margin-left: 20px;
+  padding: 10px;
   display: inline-block;
   font-family: "sentinel-bold-italic";
   font-size: 100px;
+  transition: all 0.3s;
+}
+.paragraph-links ol li a:hover {
+  background-color: #DE4C4C;
+  color: #fff;
 }
 
 .paragraph-carousel .highlighted-client {
@@ -129,6 +180,18 @@
 .paragraph-latest-news {
   background-color: #000;
 }
+.paragraph-latest-news .d-flex > div {
+  width: calc(50% - 20px);
+}
+.paragraph-latest-news .d-flex h2 {
+  padding: 20px 0;
+}
+.paragraph-latest-news .title-block {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  padding-bottom: 1.5rem;
+}
 
 .paragraph-team {
   background-color: #000;
@@ -159,6 +222,13 @@
 @media screen and (max-width: 580px) {
   .intro-home h1 {
     font-size: 40px;
+  }
+  .intro-home h1 span a {
+    padding: 0;
+  }
+  .intro-home h1 span a:hover {
+    background: transparent;
+    color: inherit;
   }
   .intro-home #scroll-intro-home {
     bottom: 0;
@@ -191,6 +261,13 @@
   .paragraph-latest-news .d-flex {
     flex-direction: column;
   }
+  .paragraph-latest-news .d-flex > div {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  .paragraph-latest-news .d-flex > div:last-child {
+    margin-bottom: 0;
+  }
 
   .paragraph-carousel .highlighted-client {
     margin: 0;
@@ -202,11 +279,19 @@
     top: 40px;
   }
   .paragraph-carousel .highlighted-client .wrapper img {
-    max-width: 200px;
+    max-width: 170px;
     margin: auto;
   }
   .paragraph-carousel .highlighted-client .wrapper .text {
     padding-left: 0;
+    font-size: 20px;
+  }
+  .paragraph-carousel .carousel-swiper .swiper {
+    width: calc(100% - 100px);
+    margin-left: 100px;
+  }
+  .paragraph-carousel .carousel-swiper .btns-slider {
+    left: 0px;
   }
 }
 
