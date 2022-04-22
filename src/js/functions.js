@@ -14,7 +14,7 @@ $(document).ready(function() {
     const swiper = new Swiper('.swiper', {
       loop: true,
       slidesPerView: 1,
-      spaceBetween: 40,
+      spaceBetween: 20,
     
       // If we need pagination
       pagination: {
@@ -33,10 +33,6 @@ $(document).ready(function() {
       },
       breakpoints: {
         750: {
-          slidesPerView: 1,
-          spaceBetween: 0,
-        },
-        992: {
           slidesPerView: 2,
           spaceBetween: 30,
         },
