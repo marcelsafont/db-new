@@ -74,6 +74,9 @@
 .paragraph-text-intro .content {
   font-size: 40px;
 }
+.paragraph-text-intro .content * {
+  font-family: "circular-book";
+}
 
 .paragraph-links ol {
   counter-reset: my-awesome-counter;
@@ -129,6 +132,7 @@
 .paragraph-carousel .highlighted-client .wrapper .text {
   padding-left: 70px;
   padding-top: 50px;
+  font-family: "circular-book";
   justify-content: center;
 }
 .paragraph-carousel .highlighted-client .wrapper .text h2 {
@@ -192,6 +196,7 @@
   text-transform: uppercase;
   color: #fff;
   padding-bottom: 1.5rem;
+  font-family: "circular-book";
 }
 
 .paragraph-team {

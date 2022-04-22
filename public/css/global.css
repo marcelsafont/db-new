@@ -391,9 +391,11 @@ p {
 .client-slider-teaser h2 {
   font-family: "sentinel-bold-italic";
   font-size: 30px;
+  padding-bottom: 10px;
 }
 .client-slider-teaser .content * {
   font-size: 18px;
+  font-family: "circular-book";
 }
 
 .article-teaser-latest .image-post img {
