@@ -11,7 +11,17 @@ $(document).ready(function() {
           $('body').removeClass("menu-open");
     });
 
-    const swiper = new Swiper('.swiper', {
+    //filtre clients
+
+    $('.paragraph-list-clientes .filters').click(function(){
+      $('#filter-form-clients').addClass('active');
+    })
+
+    $('#filter-form-clients .top').click(function(){
+      $('#filter-form-clients').removeClass('active');
+    })
+
+    const swiper = new Swiper('.swiper-custom-carousel', {
       loop: true,
       slidesPerView: 1,
       spaceBetween: 20,
@@ -42,5 +52,11 @@ $(document).ready(function() {
         }
       }
     });
+
+    const swiper2 = new Swiper('.swiper-slider-clients', {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 20,
+    })
       
 });

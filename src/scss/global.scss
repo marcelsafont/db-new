@@ -369,6 +369,15 @@ p{
   }
 }
 
+.client-slider-highlighted{
+  min-height:550px;
+  background-repeat:none;
+  background-size:cover;
+  background-position:center center;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 
 @media screen and (max-width:1280px){
   .container{
